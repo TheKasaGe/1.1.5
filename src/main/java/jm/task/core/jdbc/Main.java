@@ -1,12 +1,13 @@
 package jm.task.core.jdbc;
 
-import jm.task.core.jdbc.dao.UserDao;
-import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
+
 import jm.task.core.jdbc.model.User;
+import jm.task.core.jdbc.service.UserService;
+import jm.task.core.jdbc.service.UserServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
-        UserDao q = new UserDaoJDBCImpl();
+        UserService q = new UserServiceImpl();
 //         1. Создание таблицы
         q.createUsersTable();
 //         2. Создание и добавление в таблицу User'ов
